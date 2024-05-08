@@ -239,16 +239,17 @@ console.log("Prima del ciclo", charactersNames.length);
 for (let index = 0; index < charactersNames.length; index++) {
   if (charactersNames[index] === femaleCharacters[index]) {
     charactersNames.pop();
-    console.log("Eleminato elemento", charactersNames.length);
+    console.log("Eliminato elemento", charactersNames.length);
   }
 }
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+
 let count = 0;
-while (count < starWarsCharacters[count]) {
-  const increment = Math.random();
+while (count < starWarsCharacters.length) {
+  const increment = Math.round(Math.random() * 1 + 1); //Dopo una ricerca su Google sono riuscito a trovare la funzione .random adata al mio caso.
   console.log("Elemento casuale: ", starWarsCharacters[count].name);
   count = count + increment;
 }
